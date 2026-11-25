@@ -1,0 +1,2580 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>牛牛在饯_饯行仪式影像_火车主题短片</title>
+  <meta name="description" content="牛牛在饯是一个专注于饯行仪式与火车旅途影像的视频品牌。提供站台送别短片、旅途纪实、站台纪实、设备清单与创作手记，适合影像创作者与旅途记录者浏览。">
+  <meta name="keywords" content="饯行短片,站台纪实,火车旅途影像,离别仪式感,旅途创作手记">
+  <style>
+    /* ----- 全局变量与重置 ----- */
+    :root {
+      --color-bg: #faf7f2;
+      --color-surface: #ffffff;
+      --color-primary: #9e2b25;
+      --color-primary-soft: #f3e3e1;
+      --color-accent: #c68b3c;
+      --color-accent-soft: #f7efe3;
+      --color-text: #1e1c1a;
+      --color-text-secondary: #5a5550;
+      --color-text-muted: #8d8781;
+      --color-border: #e5dfd7;
+      --color-border-light: #f0ebe5;
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 20px;
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+      --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.08);
+      --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.1);
+      --font-sans: system-ui, -apple-system, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      --font-serif: "Songti SC", "Noto Serif SC", Georgia, serif;
+      --header-height: 64px;
+      --announce-height: 40px;
+      --sticky-offset: calc(var(--header-height) + var(--announce-height) + 8px);
+      --container-max: 1360px;
+      --transition: 0.2s ease;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: var(--sticky-offset);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.65;
+      font-size: 15px;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    ul,
+    ol {
+      list-style: none;
+    }
+
+    button {
+      font: inherit;
+      color: inherit;
+      cursor: pointer;
+      border: none;
+      background: none;
+    }
+
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+
+    /* ----- 通用容器 ----- */
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ----- 吸顶公告条 ----- */
+    .announcement-bar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--color-primary);
+      color: #fff;
+      height: var(--announce-height);
+      display: flex;
+      align-items: center;
+      font-size: 13px;
+      letter-spacing: 0.02em;
+    }
+
+    .announcement-bar .container {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      overflow: hidden;
+    }
+
+    .announcement-badge {
+      background: var(--color-accent);
+      color: #1e1c1a;
+      font-weight: 700;
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 3px;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .announcement-text {
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .announcement-text strong {
+      font-weight: 700;
+    }
+
+    /* ----- 吸顶页头 ----- */
+    .site-header {
+      position: sticky;
+      top: var(--announce-height);
+      z-index: 99;
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--color-border-light);
+      height: var(--header-height);
+      transition: box-shadow var(--transition);
+    }
+
+    .site-header .container {
+      display: flex;
+      align-items: center;
+      height: 100%;
+      gap: 24px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .brand-mark {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .brand-name {
+      font-size: 19px;
+      font-weight: 800;
+      letter-spacing: 0.04em;
+      color: var(--color-primary);
+      white-space: nowrap;
+    }
+
+    .main-nav {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      margin-left: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .main-nav::-webkit-scrollbar {
+      display: none;
+    }
+
+    .main-nav a {
+      padding: 6px 12px;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      border-radius: var(--radius-sm);
+      white-space: nowrap;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .main-nav a:hover {
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+    }
+
+    .header-actions {
+      margin-left: auto;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0;
+    }
+
+    .search-box {
+      display: flex;
+      align-items: center;
+      border: 1px solid var(--color-border);
+      border-radius: 24px;
+      padding: 4px 4px 4px 14px;
+      background: var(--color-surface);
+      transition: border-color var(--transition);
+    }
+
+    .search-box:focus-within {
+      border-color: var(--color-primary);
+    }
+
+    .search-box input {
+      border: none;
+      background: none;
+      outline: none;
+      font-size: 13px;
+      width: 140px;
+      color: var(--color-text);
+    }
+
+    .search-box input::placeholder {
+      color: var(--color-text-muted);
+    }
+
+    .search-box button {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--color-primary);
+      color: #fff;
+      transition: background var(--transition);
+    }
+
+    .search-box button:hover {
+      background: #7a1f1a;
+    }
+
+    .btn-ghost {
+      font-size: 13px;
+      font-weight: 600;
+      padding: 7px 16px;
+      border-radius: 24px;
+      border: 1px solid var(--color-primary);
+      color: var(--color-primary);
+      white-space: nowrap;
+      transition: background var(--transition), color var(--transition);
+    }
+
+    .btn-ghost:hover {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    /* ----- 首屏 Hero ----- */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      background: linear-gradient(165deg, #1e1c1a 0%, #2e2420 55%, #3d2b24 100%);
+      color: #fff;
+      padding: 80px 0 90px;
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(circle at 78% 22%, rgba(198, 139, 60, 0.25) 0%, transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(158, 43, 37, 0.3) 0%, transparent 50%);
+      pointer-events: none;
+    }
+
+    .hero .container {
+      position: relative;
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 48px;
+      align-items: center;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      color: var(--color-accent);
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      border: 1px solid rgba(198, 139, 60, 0.4);
+      padding: 5px 14px;
+      border-radius: 30px;
+    }
+
+    .hero-eyebrow::before {
+      content: "";
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    .hero h1 {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 5vw, 3.8rem);
+      font-weight: 900;
+      line-height: 1.12;
+      letter-spacing: 0.02em;
+      margin-bottom: 22px;
+    }
+
+    .hero-desc {
+      font-size: 16px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.78);
+      max-width: 520px;
+      margin-bottom: 32px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 32px;
+      transition: background var(--transition), transform var(--transition);
+    }
+
+    .btn-primary:hover {
+      background: #b8322b;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline-light {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      padding: 13px 28px;
+      border-radius: 32px;
+      transition: background var(--transition), border-color var(--transition);
+    }
+
+    .btn-outline-light:hover {
+      background: rgba(255, 255, 255, 0.1);
+      border-color: rgba(255, 255, 255, 0.6);
+    }
+
+    .hero-stats {
+      display: flex;
+      gap: 36px;
+      flex-wrap: wrap;
+    }
+
+    .hero-stat strong {
+      display: block;
+      font-size: 26px;
+      font-weight: 800;
+      color: var(--color-accent);
+      line-height: 1.2;
+      font-family: var(--font-serif);
+    }
+
+    .hero-stat span {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.55);
+      letter-spacing: 0.05em;
+    }
+
+    /* 首屏视觉构图 - SVG 站台意象 */
+    .hero-visual {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-visual svg {
+      width: 100%;
+      max-width: 460px;
+      height: auto;
+      filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.35));
+    }
+
+    /* ----- 主内容布局：三栏门户 ----- */
+    .layout-portal {
+      display: grid;
+      grid-template-columns: 178px minmax(0, 1fr) 248px;
+      gap: 32px;
+      align-items: start;
+      padding: 48px 0 64px;
+    }
+
+    /* 左频道索引 */
+    .channel-index {
+      position: sticky;
+      top: var(--sticky-offset);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 18px 0;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .channel-index h2 {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+      padding: 0 18px 12px;
+      border-bottom: 1px solid var(--color-border-light);
+      margin-bottom: 8px;
+    }
+
+    .channel-index ul li a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 9px 18px;
+      font-size: 14px;
+      color: var(--color-text-secondary);
+      transition: background var(--transition), color var(--transition);
+      border-left: 3px solid transparent;
+    }
+
+    .channel-index ul li a:hover {
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      border-left-color: var(--color-primary);
+    }
+
+    .channel-index ul li a .count {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      background: var(--color-bg);
+      padding: 1px 7px;
+      border-radius: 10px;
+    }
+
+    /* 中栏主内容 */
+    .main-column {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 44px;
+    }
+
+    /* 右辅助栏 */
+    .aside-column {
+      position: sticky;
+      top: var(--sticky-offset);
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* ----- 通用板块标题 ----- */
+    .section-head {
+      margin-bottom: 20px;
+    }
+
+    .section-head h2 {
+      font-family: var(--font-serif);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--color-text);
+      letter-spacing: 0.02em;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .section-head h2::before {
+      content: "";
+      display: inline-block;
+      width: 4px;
+      height: 22px;
+      background: var(--color-primary);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .section-head p {
+      font-size: 14px;
+      color: var(--color-text-muted);
+      margin-top: 6px;
+      padding-left: 14px;
+    }
+
+    /* ----- 主题领域概览 ----- */
+    .overview-block {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: 28px 30px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .overview-block p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--color-text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .overview-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .overview-block strong {
+      color: var(--color-text);
+      font-weight: 700;
+    }
+
+    /* ----- 精选卡片网格 ----- */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    .content-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--transition), box-shadow var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .card-image {
+      position: relative;
+      overflow: hidden;
+      background: var(--color-border-light);
+    }
+
+    .card-image img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .content-card:hover .card-image img {
+      transform: scale(1.04);
+    }
+
+    .card-body {
+      padding: 16px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+
+    .card-type {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      color: var(--color-primary);
+      background: var(--color-primary-soft);
+      padding: 2px 9px;
+      border-radius: 4px;
+      margin-bottom: 9px;
+      align-self: flex-start;
+    }
+
+    .card-title {
+      font-size: 16px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-bottom: 8px;
+      color: var(--color-text);
+    }
+
+    .card-desc {
+      font-size: 13px;
+      line-height: 1.65;
+      color: var(--color-text-secondary);
+      margin-bottom: 12px;
+      flex: 1;
+    }
+
+    .card-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-bottom: 12px;
+    }
+
+    .card-tags span {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      background: var(--color-bg);
+      padding: 2px 8px;
+      border-radius: 10px;
+    }
+
+    .card-meta {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 12px;
+      color: var(--color-text-muted);
+      border-top: 1px solid var(--color-border-light);
+      padding-top: 10px;
+    }
+
+    .card-meta .hot {
+      color: var(--color-primary);
+      font-weight: 600;
+    }
+
+    /* ----- 最新更新列表 ----- */
+    .update-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .update-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 14px 20px;
+      border-bottom: 1px solid var(--color-border-light);
+      transition: background var(--transition);
+    }
+
+    .update-item:last-child {
+      border-bottom: none;
+    }
+
+    .update-item:hover {
+      background: var(--color-bg);
+    }
+
+    .update-time {
+      font-size: 12px;
+      color: var(--color-text-muted);
+      white-space: nowrap;
+      min-width: 62px;
+      padding-top: 2px;
+      font-variant-numeric: tabular-nums;
+    }
+
+    .update-content {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .update-content strong {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text);
+      display: block;
+      margin-bottom: 2px;
+    }
+
+    .update-content p {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.5;
+    }
+
+    /* ----- 分类入口 ----- */
+    .category-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 14px;
+    }
+
+    .category-item {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 18px 16px;
+      text-align: center;
+      transition: border-color var(--transition), background var(--transition), transform var(--transition);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .category-item:hover {
+      border-color: var(--color-primary);
+      background: var(--color-primary-soft);
+      transform: translateY(-2px);
+    }
+
+    .category-icon {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--color-accent-soft);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-accent);
+    }
+
+    .category-item strong {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .category-item span {
+      font-size: 11px;
+      color: var(--color-text-muted);
+    }
+
+    /* ----- 深度解析正文 ----- */
+    .deep-dive {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-lg);
+      padding: 32px 34px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .deep-dive h3 {
+      font-family: var(--font-serif);
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--color-text);
+      margin: 26px 0 12px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .deep-dive h3:first-of-type {
+      margin-top: 0;
+    }
+
+    .deep-dive p {
+      font-size: 15px;
+      line-height: 1.85;
+      color: var(--color-text-secondary);
+      margin-bottom: 14px;
+    }
+
+    .deep-dive ul {
+      margin: 10px 0 16px;
+      padding-left: 0;
+    }
+
+    .deep-dive ul li {
+      position: relative;
+      padding-left: 22px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--color-text-secondary);
+      margin-bottom: 6px;
+    }
+
+    .deep-dive ul li::before {
+      content: "";
+      position: absolute;
+      left: 2px;
+      top: 10px;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--color-accent);
+    }
+
+    .deep-dive .highlight-box {
+      background: var(--color-accent-soft);
+      border-left: 3px solid var(--color-accent);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      padding: 16px 20px;
+      margin: 16px 0;
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+
+    .deep-dive .highlight-box strong {
+      color: var(--color-text);
+    }
+
+    /* ----- 体验指南 / 消费路径 ----- */
+    .guide-steps {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .guide-step {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 20px 22px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .step-num {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      color: #fff;
+      font-weight: 800;
+      font-size: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-serif);
+    }
+
+    .step-body h4 {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--color-text);
+    }
+
+    .step-body p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+
+    /* ----- FAQ ----- */
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .faq-list details {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: border-color var(--transition);
+    }
+
+    .faq-list details[open] {
+      border-color: var(--color-primary);
+    }
+
+    .faq-list summary {
+      padding: 16px 20px;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--color-text);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      transition: background var(--transition);
+    }
+
+    .faq-list summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-list summary::after {
+      content: "+";
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--color-primary);
+      flex-shrink: 0;
+      transition: transform var(--transition);
+    }
+
+    .faq-list details[open] summary::after {
+      content: "−";
+    }
+
+    .faq-list summary:hover {
+      background: var(--color-bg);
+    }
+
+    .faq-answer {
+      padding: 0 20px 18px;
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--color-text-secondary);
+      border-top: 1px solid var(--color-border-light);
+      padding-top: 14px;
+    }
+
+    /* ----- 用户评论 ----- */
+    .comment-wall {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .comment-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .comment-head {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .comment-avatar {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: var(--color-primary-soft);
+      color: var(--color-primary);
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-serif);
+    }
+
+    .comment-name {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-text);
+    }
+
+    .comment-date {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      margin-left: auto;
+    }
+
+    .comment-text {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--color-text-secondary);
+    }
+
+    /* ----- 相关资讯 ----- */
+    .news-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .news-item {
+      display: flex;
+      gap: 16px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      transition: box-shadow var(--transition);
+    }
+
+    .news-item:hover {
+      box-shadow: var(--shadow-md);
+    }
+
+    .news-thumb {
+      width: 120px;
+      flex-shrink: 0;
+      overflow: hidden;
+      background: var(--color-border-light);
+    }
+
+    .news-thumb img {
+      width: 100%;
+      height: 100%;
+      min-height: 100px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .news-body {
+      padding: 14px 18px 14px 0;
+      flex: 1;
+      min-width: 0;
+    }
+
+    .news-date {
+      font-size: 11px;
+      color: var(--color-text-muted);
+      letter-spacing: 0.03em;
+      margin-bottom: 4px;
+    }
+
+    .news-title {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--color-text);
+      margin-bottom: 4px;
+      line-height: 1.4;
+    }
+
+    .news-summary {
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+
+    /* ----- 相关推荐标签索引 ----- */
+    .related-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .related-tags a {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 13px;
+      font-weight: 500;
+      color: var(--color-text-secondary);
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 8px 16px;
+      border-radius: 24px;
+      transition: all var(--transition);
+    }
+
+    .related-tags a:hover {
+      background: var(--color-primary);
+      color: #fff;
+      border-color: var(--color-primary);
+    }
+
+    .related-tags a .tag-count {
+      font-size: 11px;
+      opacity: 0.65;
+      background: rgba(0, 0, 0, 0.06);
+      padding: 0 6px;
+      border-radius: 8px;
+    }
+
+    .related-tags a:hover .tag-count {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    /* ----- 补充板块：热门榜单 ----- */
+    .rank-list {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .rank-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 13px 18px;
+      border-bottom: 1px solid var(--color-border-light);
+      transition: background var(--transition);
+    }
+
+    .rank-item:last-child {
+      border-bottom: none;
+    }
+
+    .rank-item:hover {
+      background: var(--color-bg);
+    }
+
+    .rank-num {
+      width: 24px;
+      height: 24px;
+      border-radius: 6px;
+      background: var(--color-bg);
+      color: var(--color-text-muted);
+      font-weight: 800;
+      font-size: 13px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-family: var(--font-serif);
+    }
+
+    .rank-item:nth-child(1) .rank-num {
+      background: var(--color-primary);
+      color: #fff;
+    }
+
+    .rank-item:nth-child(2) .rank-num {
+      background: var(--color-accent);
+      color: #fff;
+    }
+
+    .rank-item:nth-child(3) .rank-num {
+      background: #d4a96a;
+      color: #fff;
+    }
+
+    .rank-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .rank-info strong {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--color-text);
+      display: block;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .rank-info span {
+      font-size: 12px;
+      color: var(--color-text-muted);
+    }
+
+    .rank-score {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--color-primary);
+      white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ----- 侧栏小组件 ----- */
+    .aside-widget {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border-light);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .aside-widget-head {
+      padding: 14px 18px;
+      border-bottom: 1px solid var(--color-border-light);
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--color-text);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .aside-widget-head::before {
+      content: "";
+      width: 3px;
+      height: 14px;
+      background: var(--color-primary);
+      border-radius: 2px;
+    }
+
+    .aside-widget-body {
+      padding: 10px 0;
+    }
+
+    .aside-hot-item {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      padding: 8px 18px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      transition: color var(--transition);
+    }
+
+    .aside-hot-item:hover {
+      color: var(--color-primary);
+    }
+
+    .aside-hot-item .idx {
+      font-weight: 800;
+      font-size: 12px;
+      color: var(--color-text-muted);
+      font-family: var(--font-serif);
+      min-width: 16px;
+    }
+
+    .aside-hot-item:nth-child(1) .idx,
+    .aside-hot-item:nth-child(2) .idx,
+    .aside-hot-item:nth-child(3) .idx {
+      color: var(--color-primary);
+    }
+
+    .aside-update-feed {
+      padding: 12px 18px;
+      font-size: 13px;
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+      border-bottom: 1px solid var(--color-border-light);
+    }
+
+    .aside-update-feed:last-child {
+      border-bottom: none;
+    }
+
+    .aside-update-feed time {
+      display: block;
+      font-size: 11px;
+      color: var(--color-text-muted);
+      margin-bottom: 3px;
+    }
+
+    .aside-cta {
+      background: linear-gradient(145deg, var(--color-primary), #7a1f1a);
+      color: #fff;
+      border-radius: var(--radius-md);
+      padding: 22px 20px;
+      text-align: center;
+    }
+
+    .aside-cta strong {
+      display: block;
+      font-size: 16px;
+      font-weight: 800;
+      margin-bottom: 6px;
+      font-family: var(--font-serif);
+    }
+
+    .aside-cta p {
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.75);
+      margin-bottom: 14px;
+      line-height: 1.6;
+    }
+
+    .aside-cta .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.6);
+      color: #fff;
+      display: inline-block;
+      padding: 8px 22px;
+    }
+
+    .aside-cta .btn-ghost:hover {
+      background: #fff;
+      color: var(--color-primary);
+      border-color: #fff;
+    }
+
+    /* ----- 搜索无结果提示 ----- */
+    .search-empty {
+      display: none;
+      text-align: center;
+      padding: 40px 20px;
+      color: var(--color-text-muted);
+      font-size: 14px;
+      background: var(--color-surface);
+      border: 1px dashed var(--color-border);
+      border-radius: var(--radius-md);
+    }
+
+    .search-empty.visible {
+      display: block;
+    }
+
+    /* ----- 页尾 ----- */
+    .site-footer {
+      background: #1e1c1a;
+      color: rgba(255, 255, 255, 0.7);
+      padding: 56px 0 32px;
+      margin-top: 32px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr repeat(3, 1fr);
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-brand .brand-name {
+      color: #fff;
+      margin-bottom: 12px;
+      display: block;
+      font-size: 20px;
+    }
+
+    .footer-brand p {
+      font-size: 13px;
+      line-height: 1.8;
+      color: rgba(255, 255, 255, 0.55);
+      max-width: 280px;
+    }
+
+    .footer-col h4 {
+      font-size: 13px;
+      font-weight: 700;
+      color: #fff;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+      text-transform: uppercase;
+    }
+
+    .footer-col ul li a {
+      display: block;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.55);
+      padding: 5px 0;
+      transition: color var(--transition);
+    }
+
+    .footer-col ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 12px;
+      font-size: 12px;
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-bottom span {
+      line-height: 1.6;
+    }
+
+    /* ----- 响应式 ----- */
+    @media (max-width: 1200px) {
+      .layout-portal {
+        grid-template-columns: 160px minmax(0, 1fr) 220px;
+        gap: 24px;
+      }
+
+      .hero .container {
+        gap: 32px;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .layout-portal {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 32px;
+      }
+
+      .channel-index {
+        position: static;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 12px 16px;
+        gap: 4px;
+      }
+
+      .channel-index h2 {
+        width: 100%;
+        padding: 0 0 8px;
+        margin-bottom: 4px;
+        border-bottom: 1px solid var(--color-border-light);
+      }
+
+      .channel-index ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 4px;
+        width: 100%;
+      }
+
+      .channel-index ul li a {
+        border-left: none;
+        border-radius: var(--radius-sm);
+        padding: 7px 12px;
+        font-size: 13px;
+      }
+
+      .channel-index ul li a .count {
+        display: none;
+      }
+
+      .aside-column {
+        position: static;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+      }
+
+      .hero .container {
+        grid-template-columns: 1fr;
+        gap: 40px;
+      }
+
+      .hero-visual {
+        order: -1;
+        max-width: 380px;
+        margin: 0 auto;
+      }
+
+      .hero-visual svg {
+        max-width: 320px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+      }
+    }
+
+    @media (max-width: 740px) {
+      :root {
+        --header-height: 56px;
+        --announce-height: 36px;
+      }
+
+      .container {
+        padding: 0 16px;
+      }
+
+      .main-nav {
+        display: none;
+      }
+
+      .search-box input {
+        width: 100px;
+      }
+
+      .search-box {
+        padding-left: 10px;
+      }
+
+      .btn-ghost {
+        display: none;
+      }
+
+      .hero {
+        padding: 52px 0 64px;
+      }
+
+      .hero h1 {
+        font-size: 2.2rem;
+      }
+
+      .hero-desc {
+        font-size: 15px;
+      }
+
+      .hero-stats {
+        gap: 24px;
+      }
+
+      .hero-stat strong {
+        font-size: 22px;
+      }
+
+      .card-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .guide-steps {
+        grid-template-columns: 1fr;
+      }
+
+      .comment-wall {
+        grid-template-columns: 1fr;
+      }
+
+      .aside-column {
+        grid-template-columns: 1fr;
+      }
+
+      .deep-dive {
+        padding: 24px 20px;
+      }
+
+      .overview-block {
+        padding: 22px 20px;
+      }
+
+      .news-thumb {
+        width: 90px;
+      }
+
+      .news-body {
+        padding: 12px 14px 12px 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+      }
+
+      .update-item {
+        padding: 12px 16px;
+        gap: 10px;
+      }
+
+      .update-time {
+        min-width: 52px;
+        font-size: 11px;
+      }
+
+      .announcement-text {
+        font-size: 12px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+      }
+    }
+  </style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+  <!-- 吸顶公告条 -->
+  <div class="announcement-bar">
+    <div class="container">
+      <span class="announcement-badge">更新</span>
+      <span class="announcement-text"><strong>本周新增 12 条站台纪实影像</strong> · 11 月 25 日「夜行列车送别」系列上线 · 冬季长途车次拍摄指南已发布</span>
+    </div>
+  </div>
+
+  <!-- 吸顶页头 -->
+  <header class="site-header">
+    <div class="container">
+      <a href="/#hero" class="brand" aria-label="牛牛在饯 首页">
+        <svg class="brand-mark" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect width="40" height="40" rx="10" fill="#9e2b25"/>
+          <path d="M10 26c0-2 2-3 2-5s-1-3-1-5 2-4 4-4 3 2 3 4 1 4 3 4 2-2 2-4 1-4 3-4 4 2 4 4-1 3-1 5 2 3 2 5" stroke="#fff" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+          <circle cx="20" cy="12" r="2" fill="#c68b3c"/>
+          <path d="M12 30h16" stroke="#c68b3c" stroke-width="2.2" stroke-linecap="round"/>
+        </svg>
+        <span class="brand-name">牛牛在饯</span>
+      </a>
+
+      <nav class="main-nav" aria-label="主导航">
+        <a href="/#overview">品牌概览</a>
+        <a href="/#featured">精选影像</a>
+        <a href="/#updates">最新动态</a>
+        <a href="/#categories">内容分类</a>
+        <a href="/#deep-dive">深度解析</a>
+        <a href="/#faq">常见问答</a>
+      </nav>
+
+      <div class="header-actions">
+        <form class="search-box" role="search" id="searchForm">
+          <input type="search" id="searchInput" placeholder="搜索影像、站台、旅程…" aria-label="搜索内容">
+          <button type="submit" aria-label="搜索">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+          </button>
+        </form>
+        <a href="/#featured" class="btn-ghost">开始探索</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- 首屏 Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-content">
+          <span class="hero-eyebrow">站台纪实 · 旅途影像 · 离别仪式</span>
+          <h1>牛牛在饯</h1>
+          <p class="hero-desc">用镜头记录每一次站台上的挥手与启程。从绿皮车到高铁，从夜行列车到长途慢车，这里汇集了真实的饯行场景、旅途纪实与创作手记，让离别也有温度。</p>
+          <div class="hero-actions">
+            <a href="/#featured" class="btn-primary">
+              浏览精选影像
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+            <a href="/#deep-dive" class="btn-outline-light">了解创作理念</a>
+          </div>
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <strong>186</strong>
+              <span>站台纪实影像</span>
+            </div>
+            <div class="hero-stat">
+              <strong>42</strong>
+              <span>城市车站记录</span>
+            </div>
+            <div class="hero-stat">
+              <strong>2.8万</strong>
+              <span>旅途创作者</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-hidden="true">
+          <svg viewBox="0 0 400 360" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+              <linearGradient id="skyGrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#3d2b24"/>
+                <stop offset="100%" stop-color="#1e1c1a"/>
+              </linearGradient>
+              <linearGradient id="trainGrad" x1="0" y1="0" x2="1" y2="0">
+                <stop offset="0%" stop-color="#c68b3c"/>
+                <stop offset="100%" stop-color="#9e2b25"/>
+              </linearGradient>
+            </defs>
+            <rect x="20" y="40" width="360" height="280" rx="16" fill="url(#skyGrad)"/>
+            <!-- 铁轨 -->
+            <path d="M40 280 L360 280" stroke="#5a5550" stroke-width="3"/>
+            <path d="M40 290 L360 290" stroke="#5a5550" stroke-width="3"/>
+            <path d="M60 280 L60 290 M100 280 L100 290 M140 280 L140 290 M180 280 L180 290 M220 280 L220 290 M260 280 L260 290 M300 280 L300 290 M340 280 L340 290" stroke="#5a5550" stroke-width="2"/>
+            <!-- 列车 -->
+            <rect x="80" y="160" width="240" height="110" rx="14" fill="url(#trainGrad)"/>
+            <rect x="96" y="176" width="42" height="34" rx="6" fill="#faf7f2" opacity="0.9"/>
+            <rect x="148" y="176" width="42" height="34" rx="6" fill="#faf7f2" opacity="0.9"/>
+            <rect x="200" y="176" width="42" height="34" rx="6" fill="#faf7f2" opacity="0.9"/>
+            <rect x="252" y="176" width="42" height="34" rx="6" fill="#faf7f2" opacity="0.9"/>
+            <circle cx="120" cy="250" r="14" fill="#1e1c1a"/>
+            <circle cx="120" cy="250" r="7" fill="#5a5550"/>
+            <circle cx="280" cy="250" r="14" fill="#1e1c1a"/>
+            <circle cx="280" cy="250" r="7" fill="#5a5550"/>
+            <rect x="96" y="228" width="80" height="6" rx="3" fill="#1e1c1a" opacity="0.4"/>
+            <!-- 站台灯光 -->
+            <circle cx="340" cy="100" r="18" fill="#c68b3c" opacity="0.25"/>
+            <circle cx="340" cy="100" r="8" fill="#c68b3c"/>
+            <path d="M340 108 L340 160" stroke="#c68b3c" stroke-width="2" opacity="0.5"/>
+            <!-- 人物剪影 -->
+            <circle cx="62" cy="238" r="9" fill="#faf7f2" opacity="0.85"/>
+            <path d="M50 262 Q62 246 74 262" stroke="#faf7f2" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <circle cx="330" cy="238" r="9" fill="#faf7f2" opacity="0.85"/>
+            <path d="M318 262 Q330 246 342 262" stroke="#faf7f2" stroke-width="5" fill="none" stroke-linecap="round" opacity="0.85"/>
+            <!-- 星星 -->
+            <circle cx="120" cy="80" r="2" fill="#faf7f2" opacity="0.5"/>
+            <circle cx="200" cy="60" r="1.5" fill="#faf7f2" opacity="0.4"/>
+            <circle cx="260" cy="90" r="2" fill="#faf7f2" opacity="0.5"/>
+          </svg>
+        </div>
+      </div>
+    </section>
+
+    <!-- 三栏门户布局 -->
+    <div class="container">
+      <div class="layout-portal">
+
+        <!-- 左频道索引 -->
+        <aside class="channel-index" aria-label="频道索引">
+          <h2>内容频道</h2>
+          <ul>
+            <li><a href="/#featured">站台纪实 <span class="count">64</span></a></li>
+            <li><a href="/#featured">旅途短片 <span class="count">38</span></a></li>
+            <li><a href="/#featured">夜行列车 <span class="count">26</span></a></li>
+            <li><a href="/#featured">绿皮车记忆 <span class="count">22</span></a></li>
+            <li><a href="/#featured">高铁时代 <span class="count">18</span></a></li>
+            <li><a href="/#featured">送别仪式 <span class="count">15</span></a></li>
+            <li><a href="/#featured">站台声音 <span class="count">12</span></a></li>
+            <li><a href="/#featured">创作手记 <span class="count">31</span></a></li>
+            <li><a href="/#featured">设备清单 <span class="count">9</span></a></li>
+            <li><a href="/#featured">城市车站 <span class="count">42</span></a></li>
+          </ul>
+        </aside>
+
+        <!-- 中栏主内容 -->
+        <div class="main-column">
+
+          <!-- 板块1：主题领域概览 -->
+          <section class="overview-block" id="overview">
+            <div class="section-head">
+              <h2>站台与旅途影像概览</h2>
+              <p>从站台送别到车厢内外，从夜行列车到绿皮车记忆，这里是影像创作者的素材与灵感库</p>
+            </div>
+            <p><strong>牛牛在饯</strong>聚焦的是一种正在被快速记录的影像类型——站台纪实与旅途送别。它的核心场景是火车站台、车厢窗口与出站口，核心情绪是离别、启程与重逢。当前这一领域主要包含几个方向：<strong>站台送别短片</strong>，以人物挥手、列车启动为叙事轴线；<strong>旅途纪实</strong>，记录车厢内的陌生人、窗外的风景与沿途停靠的小站；<strong>夜行列车影像</strong>，利用夜间灯光与长曝光营造情绪氛围；<strong>绿皮车与慢车记忆</strong>，关注老式车厢里的市井烟火气。</p>
+            <p>值得关注的具体内容包括：11 月 25 日上线的「夜行列车送别」系列，用 6 分钟记录了哈尔滨站 K 字头列车发车前最后的十分钟；「站台声音档案」以环境音配画面的形式，收录了 12 个不同城市车站的广播、汽笛与告别声；以及持续更新的「城市车站影像地图」，目前已覆盖北京、成都、西安、昆明等 42 座车站。这些内容适合影像创作者、旅途记录者、铁路文化爱好者，以及想在短视频平台尝试纪实类内容的自媒体人。</p>
+            <p>与常见的旅行 vlog 不同，站台纪实更强调<strong>时间的压缩</strong>与<strong>情绪的克制</strong>。一个 3 分钟的短片，往往只讲一次挥手、一个背影、一扇缓缓关闭的车门。这种类型对器材要求不高，但对观察力和剪辑节奏的要求很高。本页面的内容也围绕这一判断展开：提供可参考的拍摄对象、可对比的剪辑处理、可复用的设备方案。</p>
+          </section>
+
+          <!-- 板块2：精选内容推荐 -->
+          <section id="featured">
+            <div class="section-head">
+              <h2>精选站台影像</h2>
+              <p>当前值得投入时间观看与拆解的 8 部站台纪实短片</p>
+            </div>
+            <div class="card-grid">
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station01/400/300" alt="夜行列车送别系列封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">站台纪实</span>
+                  <h3 class="card-title">夜行列车送别：哈尔滨站 K 字头发车前十分钟</h3>
+                  <p class="card-desc">以固定机位记录检票口关闭到列车启动的十分钟，画面只有挥手、拥抱和逐渐远去的尾灯，环境音完整保留。</p>
+                  <div class="card-tags"><span>夜行列车</span><span>哈尔滨站</span><span>环境音</span></div>
+                  <div class="card-meta"><span class="hot">热度 9.8</span><span>2026-11-25</span><span>6:12</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station02/400/300" alt="站台声音档案封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">声音影像</span>
+                  <h3 class="card-title">站台声音档案：12 座城市车站的告别声</h3>
+                  <p class="card-desc">收录北京、成都、西安等 12 个车站的广播、汽笛与告别声，配以静态站台画面，适合作为创作参考音源。</p>
+                  <div class="card-tags"><span>车站广播</span><span>环境音</span><span>声音设计</span></div>
+                  <div class="card-meta"><span class="hot">热度 9.5</span><span>2026-11-21</span><span>24:30</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station03/400/300" alt="绿皮车记忆短片封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">绿皮车记忆</span>
+                  <h3 class="card-title">绿皮车上的最后一排：成都到西昌的慢行</h3>
+                  <p class="card-desc">全程跟拍 5619 次慢车，记录车厢里的背篓、扑克牌和窗外的大渡河，呈现老式车厢的市井烟火气。</p>
+                  <div class="card-tags"><span>慢火车</span><span>成昆线</span><span>市井纪实</span></div>
+                  <div class="card-meta"><span class="hot">热度 9.3</span><span>2026-11-18</span><span>18:45</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station04/400/300" alt="高铁站台送别短片封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">高铁时代</span>
+                  <h3 class="card-title">三分钟送别：西安北站的一次短暂重逢</h3>
+                  <p class="card-desc">列车停靠三分钟，一对父女在站台匆匆见面。短片用升格镜头放大拥抱和转身的瞬间，情绪克制。</p>
+                  <div class="card-tags"><span>西安北站</span><span>升格镜头</span><span>父女</span></div>
+                  <div class="card-meta"><span class="hot">热度 9.1</span><span>2026-11-15</span><span>3:40</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station05/400/300" alt="城市车站影像地图封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">城市车站</span>
+                  <h3 class="card-title">城市车站影像地图：42 座车站的站台结构对比</h3>
+                  <p class="card-desc">用俯拍与平视镜头对比不同年代车站的站台宽度、雨棚样式与灯光色温，为拍摄选址提供参考。</p>
+                  <div class="card-tags"><span>站台结构</span><span>灯光色温</span><span>选址参考</span></div>
+                  <div class="card-meta"><span class="hot">热度 8.9</span><span>2026-11-12</span><span>12:20</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station06/400/300" alt="创作手记封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">创作手记</span>
+                  <h3 class="card-title">用一支定焦拍完整个送别：35mm 的取舍</h3>
+                  <p class="card-desc">作者分享只用 35mm 定焦镜头完成站台送别短片的经验，包括机位选择、距离控制和情绪抓取时机。</p>
+                  <div class="card-tags"><span>定焦镜头</span><span>机位</span><span>剪辑节奏</span></div>
+                  <div class="card-meta"><span class="hot">热度 8.7</span><span>2026-11-08</span><span>9:15</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station07/400/300" alt="站台雨夜短片封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">夜行列车</span>
+                  <h3 class="card-title">站台雨夜：昆明站的一次凌晨发车</h3>
+                  <p class="card-desc">雨夜灯光下的站台反光、伞下告别和湿漉漉的铁轨，构成一部低照度环境下的情绪短片。</p>
+                  <div class="card-tags"><span>雨夜</span><span>昆明站</span><span>低照度</span></div>
+                  <div class="card-meta"><span class="hot">热度 8.6</span><span>2026-11-03</span><span>5:28</span></div>
+                </div>
+              </article>
+
+              <article class="content-card">
+                <div class="card-image">
+                  <img src="https://picsum.photos/seed/niuniu-station08/400/300" alt="设备清单封面" width="400" height="300" loading="lazy">
+                </div>
+                <div class="card-body">
+                  <span class="card-type">设备清单</span>
+                  <h3 class="card-title">站台纪实设备清单：轻量化方案与收音配置</h3>
+                  <p class="card-desc">列举适合站台环境的轻量机身、广角变焦与指向性麦克风组合，并说明如何在嘈杂环境中保留人声。</p>
+                  <div class="card-tags"><span>轻量化</span><span>收音</span><span>器材组合</span></div>
+                  <div class="card-meta"><span class="hot">热度 8.4</span><span>2026-10-28</span><span>7:50</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="search-empty" id="searchEmpty">没有找到匹配的影像，试试搜索“站台”“夜行列车”或“绿皮车”。</div>
+          </section>
+
+          <!-- 板块3：最新更新 / 动态 -->
+          <section id="updates">
+            <div class="section-head">
+              <h2>最新更新与动态</h2>
+              <p>站台影像、创作手记与社区活动的近期变动</p>
+            </div>
+            <div class="update-list">
+              <div class="update-item">
+                <span class="update-time">今天 09:30</span>
+                <div class="update-content">
+                  <strong>「夜行列车送别」系列第 6 集上线</strong>
+                  <p>哈尔滨站 K 字头列车发车前十分钟，固定机位完整记录。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">今天 08:12</span>
+                <div class="update-content">
+                  <strong>站台声音档案新增西安站环境音</strong>
+                  <p>收录西安站东广场广播、检票提示音与列车进站汽笛。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">昨天 21:10</span>
+                <div class="update-content">
+                  <strong>「城市车站影像地图」更新至 42 站</strong>
+                  <p>新增昆明站、南宁站与贵阳北站的站台结构与灯光对比。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">昨天 16:45</span>
+                <div class="update-content">
+                  <strong>创作手记：35mm 定焦拍送别</strong>
+                  <p>作者拆解机位选择与情绪抓取时机，附完整分镜表。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 23 日</span>
+                <div class="update-content">
+                  <strong>「绿皮车记忆」慢车专题开放投稿</strong>
+                  <p>面向旅途创作者征集 5619 次、5633 次等慢车线路的纪实短片。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 21 日</span>
+                <div class="update-content">
+                  <strong>站台雨夜短片《昆明站凌晨发车》发布</strong>
+                  <p>低照度环境下的雨夜站台情绪短片，附拍摄参数说明。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 18 日</span>
+                <div class="update-content">
+                  <strong>绿皮车慢行短片上线</strong>
+                  <p>成都到西昌 5619 次全程跟拍，记录车厢内最后一排的市井日常。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 15 日</span>
+                <div class="update-content">
+                  <strong>西安北站三分钟送别短片发布</strong>
+                  <p>升格镜头放大拥抱与转身瞬间，站台停靠时间成为叙事主轴。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 12 日</span>
+                <div class="update-content">
+                  <strong>城市车站影像地图专题上线</strong>
+                  <p>对比 42 座车站的站台宽度、雨棚样式与灯光色温。</p>
+                </div>
+              </div>
+              <div class="update-item">
+                <span class="update-time">11 月 08 日</span>
+                <div class="update-content">
+                  <strong>设备清单专题更新</strong>
+                  <p>新增指向性麦克风在嘈杂站台环境中的收音表现测试。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 板块4：分类入口 -->
+          <section id="categories">
+            <div class="section-head">
+              <h2>内容分类</h2>
+              <p>按拍摄场景与影像类型快速定位</p>
+            </div>
+            <div class="category-grid">
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M9 8h6M9 12h6M9 16h3"/></svg>
+                </span>
+                <strong>站台纪实</strong>
+                <span>64 部影像</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 12h20M12 2v20"/><circle cx="12" cy="12" r="10"/></svg>
+                </span>
+                <strong>夜行列车</strong>
+                <span>26 部影像</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 17h16M4 12h16M4 7h16"/></svg>
+                </span>
+                <strong>绿皮车记忆</strong>
+                <span>22 部影像</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+                </span>
+                <strong>高铁时代</strong>
+                <span>18 部影像</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M8 7l4-4 4 4M8 17l4 4 4-4"/></svg>
+                </span>
+                <strong>送别仪式</strong>
+                <span>15 部影像</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10v4M7 7v10M11 4v16M15 7v10M19 10v4"/></svg>
+                </span>
+                <strong>站台声音</strong>
+                <span>12 条音轨</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16v16H4z"/><path d="M8 8h8M8 12h5"/></svg>
+                </span>
+                <strong>创作手记</strong>
+                <span>31 篇手记</span>
+              </a>
+              <a href="/#featured" class="category-item">
+                <span class="category-icon">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                </span>
+                <strong>城市车站</strong>
+                <span>42 座车站</span>
+              </a>
+            </div>
+          </section>
+
+          <!-- 板块5：深度解析正文 -->
+          <section class="deep-dive" id="deep-dive">
+            <div class="section-head">
+              <h2>深度解析：站台纪实影像的创作维度</h2>
+              <p>从场景选择到剪辑节奏，拆解一部站台短片成立的关键要素</p>
+            </div>
+
+            <h3>一、场景差异：高铁站与绿皮车站的拍摄逻辑</h3>
+            <p>高铁站的站台通常宽敞、明亮、动线清晰，适合拍摄人物关系与情绪特写；绿皮车站则往往站台狭窄、光线复杂、人流密集，更适合记录环境与群像。两种场景对镜头焦段的选择有明显差异：高铁站可以用 50mm 甚至 85mm 压缩空间，把人物从背景中剥离出来；绿皮车站更适合 24mm 或 35mm 广角，把站台顶棚、行李和人群一起纳入画面。</p>
+            <p>以「夜行列车送别：哈尔滨站」为例，创作者选择了 35mm 固定机位，将检票口、列车车门和送别人群放在同一画框内，观众可以同时看到挥手的人与被送别的人。这种处理在高铁站并不常见，因为高铁站台空间太大，广角容易让画面失焦。而在绿皮车站，广角恰好能交代环境。</p>
+
+            <h3>二、时间压缩：3 分钟与 10 分钟的区别</h3>
+            <p>站台纪实短片的时长通常分为两档：3—5 分钟的「情绪切片」和 10—20 分钟的「完整记录」。前者依赖剪辑，把漫长的等待压缩成几个关键动作；后者依赖固定机位，让时间自然流逝。两种处理没有优劣，但对应不同的观看场景：情绪切片适合短视频平台，完整记录适合专题展映或创作参考。</p>
+            <ul>
+              <li><strong>情绪切片</strong>：以挥手、拥抱、转身、车门关闭为关键帧，中间用空镜或环境音过渡，节奏紧凑。</li>
+              <li><strong>完整记录</strong>：固定机位不剪切，保留站台广播、人群走动与列车启动的全过程，适合作为素材库。</li>
+              <li><strong>混合处理</strong>：先用固定机位记录全程，再从中截取 3—5 个关键动作做升格或慢放，兼顾信息量与情绪浓度。</li>
+            </ul>
+
+            <div class="highlight-box">
+              <strong>判断一个站台短片是否成立，可以看三个指标：</strong>是否有一个清晰的观察对象（一个人、一扇窗或一个站台角落）；是否有至少一个不可复制的瞬间（一个表情、一次回头或一阵风）；声音是否被认真处理（环境音是否保留、广播是否清晰）。
+            </div>
+
+            <h3>三、声音处理：站台广播是双刃剑</h3>
+            <p>站台环境音是站台纪实短片最有辨识度的元素，但也是最难处理的。车站广播、列车进站提示音和人群嘈杂声构成了天然的声景，但如果收音位置不当，广播会盖过人物对话，导致观众听不清关键信息。常见的处理方式有三种：一是使用指向性麦克风近距离收音，保留人物对话，广播作为背景；二是单独录制环境音，后期与画面同步；三是完全不保留现场人声，只留环境音，用字幕交代信息。</p>
+            <p>「站台声音档案」系列采用的是第二种方式：在站台不同位置布设多个录音点，后期与画面同步，观众听到的广播声有明确的空间方位感。这种处理对器材要求不高，但需要提前规划录音点位。</p>
+
+            <h3>四、器材选择：轻量化与收音的平衡</h3>
+            <p>站台环境对器材的要求集中在两点：机动性和收音质量。过于笨重的设备会影响拍摄者的移动，错过关键瞬间；而收音质量直接决定短片的完成度。当前社区中较常见的方案是：轻量微单机身搭配 24—70mm 变焦镜头，外加一支指向性麦克风或领夹麦克风。如果拍摄对象距离较远，可以考虑 70—200mm 长焦镜头，但需要搭配三脚架或独脚架保持稳定。</p>
+            <p>值得注意的是，站台属于公共场所，拍摄时应遵守车站管理规定，避免影响其他旅客。部分车站对三脚架和大型设备有明确限制，拍摄前建议提前了解。</p>
+          </section>
+
+          <!-- 板块6：体验指南 / 消费路径 -->
+          <section id="guide">
+            <div class="section-head">
+              <h2>观看与创作路径</h2>
+              <p>第一次接触站台纪实，从哪类内容开始看、怎么判断是否值得投入时间</p>
+            </div>
+            <div class="guide-steps">
+              <div class="guide-step">
+                <span class="step-num">1</span>
+                <div class="step-body">
+                  <h4>先看「情绪切片」，建立类型认知</h4>
+                  <p>从 3—5 分钟的站台送别短片开始，例如「西安北站三分钟送别」，快速了解这类影像的基本叙事方式：观察对象、关键动作、环境音。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="step-num">2</span>
+                <div class="step-body">
+                  <h4>再看「完整记录」，理解时间维度</h4>
+                  <p>选择 10 分钟以上的固定机位记录，例如「夜行列车送别」系列，感受不剪辑的站台时间如何自然流动，判断自己是否接受这种节奏。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="step-num">3</span>
+                <div class="step-body">
+                  <h4>对比不同场景，找到偏好</h4>
+                  <p>高铁站、绿皮车站、雨夜站台各自有不同气质。对比「绿皮车记忆」与「高铁时代」两类内容，判断自己更偏好市井烟火还是现代秩序。</p>
+                </div>
+              </div>
+              <div class="guide-step">
+                <span class="step-num">4</span>
+                <div class="step-body">
+                  <h4>判断标准：三要素是否齐全</h4>
+                  <p>一个值得投入时间的站台短片，通常同时具备清晰的观察对象、不可复制的瞬间和认真处理的声音。缺少任何一项，观看价值都会打折扣。</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- 板块7：FAQ -->
+          <section id="faq">
+            <div class="section-head">
+              <h2>常见问题</h2>
+              <p>关于站台纪实影像的观看与创作疑问</p>
+            </div>
+            <div class="faq-list">
+              <details>
+                <summary>站台纪实短片一般多久更新一次？</summary>
+                <div class="faq-answer">更新频率取决于创作者和专题。以本页收录的专题为例，「夜行列车送别」系列平均每 7—10 天更新一集，「站台声音档案」每月更新 2—3 条，「城市车站影像地图」按季度集中更新。社区投稿的站台短片则没有固定周期，建议关注最新更新板块。</div>
+              </details>
+              <details>
+                <summary>高铁站和绿皮车站拍的送别短片有什么区别？</summary>
+                <div class="faq-answer">高铁站台宽敞明亮、停靠时间短，短片更依赖升格镜头和特写，情绪浓度高但环境信息少；绿皮车站台狭窄、光线复杂、停靠时间长，短片更适合广角固定机位，能同时记录人物关系与市井环境。两者在镜头焦段、剪辑节奏和声音处理上都有明显差异。</div>
+              </details>
+              <details>
+                <summary>第一次接触站台纪实，从哪个短片开始看比较好？</summary>
+                <div class="faq-answer">建议从 3—5 分钟的情绪切片开始，例如「西安北站三分钟送别」或「站台雨夜：昆明站凌晨发车」。这类短片节奏紧凑、信息集中，能快速建立对类型的认知。看完后再选择 10 分钟以上的完整记录，感受不剪辑的站台时间。</div>
+              </details>
+              <details>
+                <summary>站台短片的评判标准通常是什么？</summary>
+                <div class="faq-answer">常见标准有三个：是否有清晰的观察对象（一个人、一扇窗或一个站台角落）；是否捕捉到至少一个不可复制的瞬间（一个表情、一次回头或一阵风）；声音是否被认真处理（环境音是否保留、广播是否与画面同步）。三项齐全的短片通常完成度较高。</div>
+              </details>
+              <details>
+                <summary>在站台拍摄需要准备哪些设备？</summary>
+                <div class="faq-answer">轻量微单机身搭配 24—70mm 变焦镜头是常见组合，外加一支指向性麦克风或领夹麦克风。如果拍摄对象距离较远，可考虑 70—200mm 长焦镜头，但需搭配三脚架或独脚架。部分车站在站台使用三脚架有明确限制，拍摄前建议提前了解规定。</div>
+              </details>
+              <details>
+                <summary>站台环境音怎么录才清晰？</summary>
+                <div class="faq-answer">常见做法有三种：使用指向性麦克风近距离收音，保留人物对话，广播作为背景；在站台不同位置布设录音点单独录制环境音，后期与画面同步；或完全不保留现场人声，只留环境音，用字幕交代信息。选择哪种方式取决于短片的叙事重点。</div>
+              </details>
+            </div>
+          </section>
+
+          <!-- 板块8：用户评论 -->
+          <section id="comments">
+            <div class="section-head">
+              <h2>社区评论</h2>
+              <p>来自旅途创作者与观众的近期反馈</p>
+            </div>
+            <div class="comment-wall">
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">林</span>
+                  <span class="comment-name">林间慢车</span>
+                  <span class="comment-date">11-25</span>
+                </div>
+                <p class="comment-text">「夜行列车送别」哈尔滨站那集看哭了，固定机位拍到了我妈当年送我上学的同款站台。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">阿</span>
+                  <span class="comment-name">阿哲拍站台</span>
+                  <span class="comment-date">11-25</span>
+                </div>
+                <p class="comment-text">站台声音档案的收音质量很高，西安站的广播层次感特别好，准备拿来当短片的环境音参考。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">小</span>
+                  <span class="comment-name">小满的旅途</span>
+                  <span class="comment-date">11-24</span>
+                </div>
+                <p class="comment-text">绿皮车那集拍得真实，车厢里打扑克的大爷和背篓的阿姨，比很多摆拍的旅行 vlog 有意思多了。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">陈</span>
+                  <span class="comment-name">陈默映像</span>
+                  <span class="comment-date">11-24</span>
+                </div>
+                <p class="comment-text">35mm 定焦那篇手记很实用，机位图和分镜表直接能照着拍，希望多出这种实操内容。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">苏</span>
+                  <span class="comment-name">苏州河畔</span>
+                  <span class="comment-date">11-23</span>
+                </div>
+                <p class="comment-text">高铁站三分钟送别那部升格用得克制，没有过度煽情，这点很难得。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">老</span>
+                  <span class="comment-name">老站台观察员</span>
+                  <span class="comment-date">11-23</span>
+                </div>
+                <p class="comment-text">城市车站影像地图的灯光色温对比很有价值，拍夜戏选站台可以直接查这个表。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">周</span>
+                  <span class="comment-name">周舟不旅游</span>
+                  <span class="comment-date">11-22</span>
+                </div>
+                <p class="comment-text">雨夜昆明站那部氛围感很强，但画面偏暗，手机上看有点吃力，建议出个亮版本。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">叶</span>
+                  <span class="comment-name">叶落无声</span>
+                  <span class="comment-date">11-22</span>
+                </div>
+                <p class="comment-text">设备清单很实在，没有堆器材，讲的都是站台环境下真正用得上的配置。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">高</span>
+                  <span class="comment-name">高铁路过</span>
+                  <span class="comment-date">11-21</span>
+                </div>
+                <p class="comment-text">送别仪式这个分类挺有意思，原来站台上挥手也有这么多拍法。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">何</span>
+                  <span class="comment-name">何以为家</span>
+                  <span class="comment-date">11-21</span>
+                </div>
+                <p class="comment-text">看完声音档案那期，特意去录了一次家门口火车站的广播，才发现环境音这么有故事感。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">郑</span>
+                  <span class="comment-name">郑在拍片</span>
+                  <span class="comment-date">11-20</span>
+                </div>
+                <p class="comment-text">站台纪实这个类型确实更适合短时长，10 分钟以上的完整记录我看了两遍还是有点难集中注意力。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">吴</span>
+                  <span class="comment-name">吴所事事的旅途</span>
+                  <span class="comment-date">11-19</span>
+                </div>
+                <p class="comment-text">成都到西昌那趟慢车我坐过，短片里的背篓和扑克牌太真实了，希望多拍点西南的慢车线路。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">许</span>
+                  <span class="comment-name">许多多</span>
+                  <span class="comment-date">11-18</span>
+                </div>
+                <p class="comment-text">城市车站地图要是能标出每个站的允许拍摄区域就更好了，现在只能看结构对比。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">沈</span>
+                  <span class="comment-name">沈从文的站台</span>
+                  <span class="comment-date">11-17</span>
+                </div>
+                <p class="comment-text">夜行列车的选题很对味，绿皮车时代那种慢悠悠的告别感，现在高铁上很难拍到了。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">韩</span>
+                  <span class="comment-name">韩梅梅的相机</span>
+                  <span class="comment-date">11-16</span>
+                </div>
+                <p class="comment-text">指向性麦克风在站台确实好用，但风大的时候要加防风毛衣，这个细节设备清单里没提到。</p>
+              </div>
+              <div class="comment-card">
+                <div class="comment-head">
+                  <span class="comment-avatar">李</span>
+                  <span class="comment-name">李木子记录</span>
+                  <span class="comment-date">11-15</span>
+                </div>
+                <p class="comment-text">西安北站那部的父女演员找得好，三分钟里情绪层次很完整，剪辑节奏值得学习。</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- 板块9：相关资讯 -->
+          <section id="news">
+            <div class="section-head">
+              <h2>相关资讯</h2>
+              <p>站台影像领域的具体动态与社区讨论焦点</p>
+            </div>
+            <div class="news-list">
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news01/600/400" alt="夜行列车送别系列上线资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-25</p>
+                  <h3 class="news-title">「夜行列车送别」系列第 6 集上线，固定机位记录哈尔滨站发车前十分钟</h3>
+                  <p class="news-summary">该系列以 35mm 固定机位连续拍摄，完整保留站台广播与列车启动声，单集时长 6 分 12 秒。</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news02/600/400" alt="站台声音档案西安站资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-23</p>
+                  <h3 class="news-title">站台声音档案新增西安站环境音，收录东广场广播与进站汽笛</h3>
+                  <p class="news-summary">该音轨采用多点布设录音的方式，后期与画面同步，空间方位感清晰，适合作为短片环境音参考。</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news03/600/400" alt="城市车站影像地图更新资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-21</p>
+                  <h3 class="news-title">城市车站影像地图更新至 42 站，新增昆明站、南宁站与贵阳北站</h3>
+                  <p class="news-summary">本次更新重点对比了西南地区车站的站台宽度、雨棚样式与夜间灯光色温，为拍摄选址提供参考。</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news04/600/400" alt="绿皮车慢车专题投稿资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-18</p>
+                  <h3 class="news-title">「绿皮车记忆」慢车专题开放投稿，征集 5619 次等线路纪实短片</h3>
+                  <p class="news-summary">专题面向旅途创作者，要求短片保留车厢环境音，展现绿皮车时代的市井日常与沿途风景。</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news05/600/400" alt="站台雨夜短片发布资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-15</p>
+                  <h3 class="news-title">站台雨夜短片《昆明站凌晨发车》发布，附低照度拍摄参数</h3>
+                  <p class="news-summary">短片利用雨夜灯光反光与湿漉漉的铁轨营造情绪，创作者同步公开了机身、镜头与快门参数。</p>
+                </div>
+              </article>
+              <article class="news-item">
+                <div class="news-thumb">
+                  <img src="https://picsum.photos/seed/niuniu-news06/600/400" alt="站台拍摄设备清单更新资讯配图" width="600" height="400" loading="lazy">
+                </div>
+                <div class="news-body">
+                  <p class="news-date">2026-11-08</p>
+                  <h3 class="news-title">站台纪实设备清单更新：指向性麦克风嘈杂环境收音测试</h3>
+                  <p class="news-summary">测试在西安北站与成都东站完成，对比了三款指向性麦克风在广播、人声与列车进站声中的表现。</p>
+                </div>
+              </article>
+            </div>
+          </section>
+
+          <!-- 板块10：相关推荐 -->
+          <section id="related">
+            <div class="section-head">
+              <h2>相关推荐</h2>
+              <p>延伸方向与具体条目索引</p>
+            </div>
+            <div class="related-tags">
+              <a href="/#featured">站台纪实拍摄手法 <span class="tag-count">18</span></a>
+              <a href="/#featured">夜行列车环境音 <span class="tag-count">9</span></a>
+              <a href="/#featured">绿皮车慢车线路 <span class="tag-count">12</span></a>
+              <a href="/#featured">高铁站升格镜头 <span class="tag-count">7</span></a>
+              <a href="/#featured">送别仪式情绪剪辑 <span class="tag-count">11</span></a>
+              <a href="/#featured">站台雨夜低照度拍摄 <span class="tag-count">5</span></a>
+              <a href="/#featured">35mm 定焦创作手记 <span class="tag-count">8</span></a>
+              <a href="/#featured">城市车站灯光色温对比 <span class="tag-count">6</span></a>
+            </div>
+          </section>
+
+          <!-- 板块11：补充板块 - 热门榜单 -->
+          <section id="ranking">
+            <div class="section-head">
+              <h2>站台影像热门榜</h2>
+              <p>按社区观看与收藏数据统计，截至 2026 年 11 月 25 日</p>
+            </div>
+            <div class="rank-list">
+              <div class="rank-item">
+                <span class="rank-num">1</span>
+                <div class="rank-info">
+                  <strong>夜行列车送别：哈尔滨站 K 字头发车前十分钟</strong>
+                  <span>站台纪实 · 6:12</span>
+                </div>
+                <span class="rank-score">9.8</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">2</span>
+                <div class="rank-info">
+                  <strong>站台声音档案：12 座城市车站的告别声</strong>
+                  <span>声音影像 · 24:30</span>
+                </div>
+                <span class="rank-score">9.5</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">3</span>
+                <div class="rank-info">
+                  <strong>绿皮车上的最后一排：成都到西昌的慢行</strong>
+                  <span>绿皮车记忆 · 18:45</span>
+                </div>
+                <span class="rank-score">9.3</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">4</span>
+                <div class="rank-info">
+                  <strong>三分钟送别：西安北站的一次短暂重逢</strong>
+                  <span>高铁时代 · 3:40</span>
+                </div>
+                <span class="rank-score">9.1</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">5</span>
+                <div class="rank-info">
+                  <strong>城市车站影像地图：42 座车站的站台结构对比</strong>
+                  <span>城市车站 · 12:20</span>
+                </div>
+                <span class="rank-score">8.9</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">6</span>
+                <div class="rank-info">
+                  <strong>用一支定焦拍完整个送别：35mm 的取舍</strong>
+                  <span>创作手记 · 9:15</span>
+                </div>
+                <span class="rank-score">8.7</span>
+              </div>
+              <div class="rank-item">
+                <span class="rank-num">7</span>
+                <div class="rank-info">
+                  <strong>站台雨夜：昆明站的一次凌晨发车</strong>
+                  <span>夜行列车 · 5:28</span>
+                </div>
+                <span class="rank-score">8.6</span>
+              </div>
+            </div>
+          </section>
+
+        </div><!-- /main-column -->
+
+        <!-- 右辅助栏 -->
+        <aside class="aside-column" aria-label="辅助信息">
+          <div class="aside-widget">
+            <div class="aside-widget-head">站台热榜</div>
+            <div class="aside-widget-body">
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">01</span>夜行列车送别·哈尔滨站</a>
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">02</span>站台声音档案·12 城</a>
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">03</span>绿皮车最后一排·成昆线</a>
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">04</span>西安北站三分钟送别</a>
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">05</span>城市车站影像地图</a>
+              <a href="/#ranking" class="aside-hot-item"><span class="idx">06</span>35mm 定焦送别手记</a>
+            </div>
+          </div>
+
+          <div class="aside-widget">
+            <div class="aside-widget-head">近期更新流</div>
+            <div class="aside-widget-body">
+              <div class="aside-update-feed">
+                <time>今天 09:30</time>
+                「夜行列车送别」第 6 集上线
+              </div>
+              <div class="aside-update-feed">
+                <time>昨天 21:10</time>
+                城市车站影像地图更新至 42 站
+              </div>
+              <div class="aside-update-feed">
+                <time>11 月 23 日</time>
+                西安站环境音加入声音档案
+              </div>
+              <div class="aside-update-feed">
+                <time>11 月 21 日</time>
+                昆明站雨夜短片发布
+              </div>
+              <div class="aside-update-feed">
+                <time>11 月 18 日</time>
+                绿皮车慢车专题开放投稿
+              </div>
+            </div>
+          </div>
+
+          <div class="aside-cta">
+            <strong>成为旅途创作者</strong>
+            <p>分享你的站台纪实短片与创作手记，与 2.8 万旅途创作者一起记录告别与启程。</p>
+            <a href="/#overview" class="btn-ghost">了解创作方向</a>
+          </div>
+        </aside>
+
+      </div><!-- /layout-portal -->
+    </div>
+  </main>
+
+  <!-- 页尾 -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <span class="brand-name">牛牛在饯</span>
+          <p>专注站台纪实与旅途影像的品牌，记录每一次挥手、每一扇车窗与每一段启程。从绿皮车到高铁，从夜行列车到慢车记忆。</p>
+        </div>
+        <div class="footer-col">
+          <h4>影像类型</h4>
+          <ul>
+            <li><a href="/#featured">站台纪实</a></li>
+            <li><a href="/#featured">夜行列车</a></li>
+            <li><a href="/#featured">绿皮车记忆</a></li>
+            <li><a href="/#featured">高铁时代</a></li>
+            <li><a href="/#featured">站台声音</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>创作支持</h4>
+          <ul>
+            <li><a href="/#deep-dive">深度解析</a></li>
+            <li><a href="/#guide">观看与创作路径</a></li>
+            <li><a href="/#featured">设备清单</a></li>
+            <li><a href="/#featured">创作手记</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>社区</h4>
+          <ul>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+            <li><a href="/#ranking">热门榜单</a></li>
+            <li><a href="/#related">相关推荐</a></li>
+            <li><a href="/#categories">内容分类</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© 2026 牛牛在饯 · 站台纪实与旅途影像品牌。页面内容为示例条目，数据统计截至 2026 年 11 月 25 日。</span>
+        <span>影像记录 · 旅途创作 · 离别仪式</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      "use strict";
+
+      // 本地搜索：筛选精选卡片与更新条目
+      var searchForm = document.getElementById("searchForm");
+      var searchInput = document.getElementById("searchInput");
+      var searchEmpty = document.getElementById("searchEmpty");
+      var featuredSection = document.getElementById("featured");
+      var updatesSection = document.getElementById("updates");
+
+      if (!searchForm || !searchInput) return;
+
+      function getSearchableItems() {
+        var items = [];
+        // 精选卡片
+        var cards = featuredSection.querySelectorAll(".content-card");
+        cards.forEach(function (card) {
+          var text = card.textContent.toLowerCase();
+          items.push({ el: card, text: text, parent: featuredSection });
+        });
+        // 更新条目
+        var updates = updatesSection.querySelectorAll(".update-item");
+        updates.forEach(function (item) {
+          var text = item.textContent.toLowerCase();
+          items.push({ el: item, text: text, parent: updatesSection });
+        });
+        return items;
+      }
+
+      var allItems = getSearchableItems();
+
+      function performSearch(query) {
+        var q = query.trim().toLowerCase();
+        if (!q) {
+          allItems.forEach(function (item) {
+            item.el.style.display = "";
+          });
+          if (searchEmpty) searchEmpty.classList.remove("visible");
+          return;
+        }
+
+        var matchCount = 0;
+        allItems.forEach(function (item) {
+          if (item.text.indexOf(q) !== -1) {
+            item.el.style.display = "";
+            matchCount++;
+          } else {
+            item.el.style.display = "none";
+          }
+        });
+
+        if (searchEmpty) {
+          if (matchCount === 0) {
+            searchEmpty.classList.add("visible");
+          } else {
+            searchEmpty.classList.remove("visible");
+          }
+        }
+      }
+
+      searchForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        performSearch(searchInput.value);
+        // 滚动到结果区域
+        var target = document.getElementById("featured");
+        if (target) {
+          target.scrollIntoView({ behavior: "smooth", block: "start" });
+        }
+      });
+
+      searchInput.addEventListener("input", function () {
+        performSearch(searchInput.value);
+      });
+    })();
+  </script>
+
+</body>
+      </html>
